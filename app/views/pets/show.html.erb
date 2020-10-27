@@ -3,6 +3,9 @@
 <h3><%= @pet.name %></h3>
 
 <ul>
-    <li>Birth Year: <%=@pet.year_of_birth%></li>
+     <!---Birth Year: @pet.year_of_birth-->
+    <li>Age: <%= Time.now.year - @pet.year_of_birth%></li>
     <li>Good with Children: <%=@pet.good_with_kids%></li>
 </ul>
+
+<%= link_to "Back", pets_path%>

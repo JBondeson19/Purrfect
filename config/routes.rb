@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   get "/", to: "static#home"
   get "/pets", to: "pets#index"
-  get "/pets/:id", to: "pets#show"
+  get "/pets/:id", to: "pets#show", as: "pet"
 
 end
