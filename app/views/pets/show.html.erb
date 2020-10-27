@@ -4,8 +4,13 @@
 
 <ul>
      <!---Birth Year: @pet.year_of_birth-->
+     <!--- Good with Children: <%=@pet.good_with_kids%> --->
     <li>Age: <%= Time.now.year - @pet.year_of_birth%></li>
-    <li>Good with Children: <%=@pet.good_with_kids%></li>
+    <% if @pet.good_with_kids == true %>
+        <%puts%> <li><%="Good with children"%></li>
+    <%else%>
+        <%puts%> <li><%="Prefers a home without children" %></li>
+    <%end%>
 </ul>
 
 <%= link_to "Back", pets_path%>

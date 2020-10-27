@@ -10,6 +10,7 @@ def show
     #@pet = Pet.find(pet_id)
 
     @pet = Pet.find(params[:id])
+    
 end 
 
 end
