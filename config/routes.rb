@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   get "/", to: "static#home"
   get "/pets", to: "pets#index"
+  get "/dogs", to: "pets#dogs"
+  get "/birds", to: "pets#birds"
+  get "cats", to: "pets#cats"
   get "/pets/:id", to: "pets#show", as: "pet"
 
 end

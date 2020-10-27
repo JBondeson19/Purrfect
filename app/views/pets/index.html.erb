@@ -1,4 +1,8 @@
-<h1>This is our index page with pet shenanigans</h1>
+<h1>This is our index page with
+<% @pets.find do |pet|%> 
+<%= pet.species%>
+<%end%>
+shenanigans</h1>
 
 <% @pets.each do |pet|%>
 <div><%= link_to pet.name, pet_path(pet.id) %></div>
